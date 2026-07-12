@@ -56,7 +56,7 @@
         }
         
         .menu-btn.list { background: #FF6B6B; }
-        .menu-btn.shop { background: #4ECDC4; }
+
         .menu-btn.recipe { background: #FFE66D; color: #333; }
         .menu-btn.budget { background: #95E1D3; color: #333; }
         .menu-btn.export { background: #2196F3; }
@@ -271,7 +271,6 @@
         <!-- MAIN MENU -->
         <div id="menu" class="menu">
             <button class="menu-btn list" onclick="showScreen('list')">📋 My List</button>
-            <button class="menu-btn shop" onclick="showScreen('shop')">🏪 Shop</button>
             <button class="menu-btn recipe" onclick="showScreen('recipes')">🍳 Recipes</button>
             <button class="menu-btn budget" onclick="showScreen('budget')">💰 Budget</button>
             <button class="menu-btn export" onclick="exportList()" style="background:#2196F3;">📤 Export List</button>
@@ -315,12 +314,7 @@
             <button class="clear-btn" onclick="clearList()">🗑️ Clear List</button>
         </div>
         
-        <!-- SHOP MODE SCREEN -->
-        <div id="shop" class="screen">
-            <button class="back-btn" onclick="showScreen('menu')">⬅️ Menu</button>
-            <h2>🏪 Shop Mode</h2>
-            <div id="shop-list" class="list-display"></div>
-        </div>
+
         
         <!-- RECIPES SCREEN -->
         <div id="recipes" class="screen">
@@ -394,7 +388,7 @@
             document.getElementById(screen).classList.add('active');
             
             if (screen === 'list') renderMyList();
-            if (screen === 'shop') renderShopList();
+
             if (screen === 'recipes') renderRecipes();
             if (screen === 'budget') renderBudgetItems();
             if (screen === 'parent') renderParentList();
@@ -464,26 +458,7 @@
             }
         }
         
-        // SHOP MODE
-        function renderShopList() {
-            const list = document.getElementById('shop-list');
-            if (myList.length === 0) {
-                list.innerHTML = '<div class="empty-state">No items to shop! Add things to your list first.</div>';
-                return;
-            }
-            
-            list.innerHTML = myList.map(item => `
-                <div class="list-item" id="shop-${item.replace(/\s/g, '-')}">
-                    <input type="checkbox" onchange="toggleShopItem('${item}')">
-                    <span>${item}</span>
-                </div>
-            `).join('');
-        }
-        
-        function toggleShopItem(item) {
-            const div = document.getElementById('shop-' + item.replace(/\s/g, '-'));
-            div.classList.toggle('checked');
-        }
+
         
         // RECIPES
         function renderRecipes() {
