@@ -196,3 +196,6 @@
 
 *Last Updated: July 12, 2026*
 *Version 2.0 - Family Edition features added based on Eva's feedback*
+
+---
+*Feedback and ideas from Amanda — the real brains behind the operation 😄*
