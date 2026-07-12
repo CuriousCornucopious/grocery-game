@@ -580,6 +580,9 @@
         }
         
         // RENDER LISTS / HISTORY
+        // Current viewed list in history (for display only)
+        let viewedListId = null;
+        
         function renderLists() {
             updateListCount();
             const container = document.getElementById('history-list');
@@ -589,16 +592,47 @@
                 return;
             }
             
+            // If viewing a specific list, show items
+            if (viewedListId) {
+                const list = listHistory.find(l => l.id === viewedListId);
+                if (list) {
+                    container.innerHTML = `
+                        <div style="margin-bottom:15px;">
+                            <button class="section-btn" onclick="viewedListId=null;renderLists()" style="background:#666;">← Back to History</button>
+                        </div>
+                        <div class="history-card" style="cursor:default;background:#fff;">
+                            <strong>${list.name}</strong>
+                            <div class="date">${list.date} • ${list.count} items</div>
+                            <hr style="margin:10px 0;border:none;border-top:1px solid #eee;">
+                            <div style="font-size:0.95rem;line-height:1.6;">
+                                ${list.items.map(item => `<div>• ${item}</div>`).join('')}
+                            </div>
+                            <div style="margin-top:15px;">
+                                <button class="section-btn" style="background:#2196F3;" onclick="loadList(${list.id})">📥 Load This List</button>
+                            </div>
+                        </div>
+                    `;
+                    return;
+                }
+            }
+            
+            // Show history list
             container.innerHTML = listHistory.map(list => `
-                <div class="history-card" onclick="loadList('${list.id}')">
+                <div class="history-card" onclick="viewList(${list.id})">
                     <strong>${list.name}</strong>
                     <div class="date">${list.date}</div>
-                    <div class="count">${list.count} items</div>
+                    <div class="count">${list.count} items • tap to view</div>
                 </div>
             `).join('');
         }
         
-        // LOAD LIST FROM HISTORY
+        // VIEW LIST (show items without loading)
+        function viewList(id) {
+            viewedListId = id;
+            renderLists();
+        }
+        
+        // LOAD LIST FROM HISTORY (replaces current list)
         function loadList(id) {
             const list = listHistory.find(l => l.id === id);
             if (!list) return;
@@ -608,6 +642,7 @@
                 checkedItems = [];
                 localStorage.setItem('groceryList', JSON.stringify(myList));
                 localStorage.setItem('checkedItems', JSON.stringify(checkedItems));
+                viewedListId = null;
                 showScreen('current-list');
             }
         }

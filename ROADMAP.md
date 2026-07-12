@@ -10,7 +10,8 @@
 **Released:** July 12, 2026
 
 ### What's Built:
-- [x] Single "Shop" button → choose Child or Parent
+- [x] Main menu: Shop & Lists (2 buttons)
+- [x] Shop → choose Child or Parent
 - [x] Child view: checkboxes, no delete
 - [x] Parent view: checkboxes + remove button
 - [x] 12 categories (Produce, Meat, Dairy, Pantry, Frozen, Beverages, Snacks, Condiments, Baking, Quick, Cleaning, Personal, Pets)
@@ -19,6 +20,9 @@
 - [x] Lists screen with export (item names only, 1 per line)
 - [x] localStorage persistence for list + checked items
 - [x] Checkboxes work in list (simulates shopping)
+- [x] List history: save lists with custom names
+- [x] List history: tap to VIEW items (new!)
+- [x] List history: load saved lists (replaces current)
 
 ---
 
