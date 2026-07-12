@@ -1,8 +1,8 @@
 # Grocery Game: Development Roadmap & Detailed Outline
 
-**Version:** 1.x - "The Core Experience & First Iterations"
+**Version:** 2.0 - "Family Edition"
 
-**Overall Vision:** To create an engaging and educational tech-learning game focused on grocery shopping, meal planning, and healthy eating, adaptable for various platforms and future expansion.
+**Overall Vision:** To create an engaging and educational tech-learning game focused on grocery shopping, meal planning, and healthy eating, adaptable for various platforms and future expansion. A family-centered app where kids learn through participation, voting, and collaboration.
 
 ---
 
@@ -15,8 +15,13 @@
 - **Gameplay:**
   - Child selects desired/needed grocery items from a curated list or visual catalog.
   - Items added to a personal "kid's shopping list."
-  - Simple interface, perhaps with a visual representation of their choices.
+  - Simple interface with clear, vibrant item images (not just text).
 - **Learning Point:** Item recognition, basic concept of "need" vs. "want."
+
+**Family Identity System:**
+- **NEW:** Each family member has their own avatar (animal or color-coded).
+- **NEW:** Items on list show who added them (avatar next to item).
+- **NEW:** Voting visualization — if three kids vote for "ice cream" vs one for "oreos," avatars show the count.
 
 **Parental Oversight & Master List Control:**
 - **Objective:** Allow parents to guide and manage the process.
@@ -43,32 +48,30 @@
 **Core Recipe Interaction:**
 - Recipe Display: View recipes with ingredient lists.
 - "Quick Add" Button: Instantaneously add all recipe ingredients to the master grocery list.
-- Export Text Format (Item Name Only): Ensure exported lists contain only item names for simplicity.
+- **NEW:** Ingredient Editing — +/- buttons or ability to uncheck individual ingredients before adding (e.g., if shells already in pantry, uncheck shells).
+- Export Text Format (Item Name Only): Ensure exported lists contain only item names, one per line, for simplicity.
 
 **User Roles & Permissions (Basic Setup):**
 - Roles: Kid (Child Mode), Parent (Master Editor).
+- **NEW:** Age-based profiles that adjust UI complexity and available actions.
 - Permissions: Parent can define basic view/edit access for each role.
+- **NEW:** Minimum requirements per age group — e.g., "Child 2 must pick 1 fruit, 1 veggie, and 1 other side for the week."
 - **Learning Point:** Understanding different user roles and access levels.
 
 **Simple Pre-designed Avatars:**
 - Type: Animal avatars (e.g., fox, bear, rabbit).
 - Customization: Basic selection from a pre-made set. No complex customization yet.
 
-### III. Initial Learning Objectives (Phase 1 Focus)
+**Budget System (Enhanced):**
+- **NEW:** Editable budget amount (not fixed at $20).
+- Budget acts as a teaching tool — prices don't need to be perfectly accurate.
+- **NEW:** Parent checkout decision — mom decides if expensive items are actually purchased.
 
-**Kids:**
-- Item recognition and association with meals.
-- Understanding of "adding to list" and "making a choice."
-- Basic concept of "healthy" vs. "less healthy" options.
-
-**Parents:**
-- Familiarization with game interface for managing lists.
-- Understanding how to guide kid's choices.
-
-### IV. Feedback & Iteration System (Setup)
-
-- Idea Capture: Implement a simple in-game or linked form for submitting new ideas/feedback.
-- Initial Feedback: Gather qualitative feedback during early testing of Phase 1 features.
+**List Management & Export:**
+- **NEW:** Rename "Export to AnyList" button to "Export List" (avoid copyright).
+- **NEW:** Fix export format — item names only, 1 per line (no category/quantity).
+- **NEW:** Store preferences — optional assignment of items to specific stores (Store A, Store B, etc.).
+- **NEW:** Sort master list by user, item type, store, or recipe before export.
 
 ---
 
@@ -86,6 +89,10 @@
 - Players (Kid 1, Kid 2, Parent) can contribute to meal planning and list building.
 - Interface supports multiple users interacting with the master list and recipe selections.
 
+**Substitution & Voting System:**
+- **NEW:** "Mom KNOWS we have this — could make B or C. Vote?" — family votes on substitutions.
+- **NEW:** Substitution suggestions based on pantry/inventory.
+
 **Graduated Win/Loss Conditions:**
 - **Objective:** Introduce more nuanced challenges.
 - **Examples:** Meeting specific nutritional balance goals (e.g., "fill the veggie plate"), staying within a dynamic budget, completing complex meal plans.
@@ -99,11 +106,21 @@
   - Allow substitutions (e.g., "swap spinach for kale"). Players might earn "knowledge points" for good substitutions.
   - Adjust quantities (e.g., "double the recipe").
   - Visual feedback on changes (e.g., impact on nutrition/cost bars).
+- **NEW:** Quantity adjustments when adding items, within recipes, and on final lists.
 - **Learning Point:** Nutrition, cooking adaptations, understanding ingredient roles.
 
 **Enhanced Data Input & Puzzles:**
 - Recipe Input: More sophisticated recipe input system, potentially with auto-parsing hints.
 - Puzzles: Develop a library of mini-games for data input, shopping list organization, and meal planning.
+
+**Household Inventory Tracking:**
+- **NEW:** Track all food items currently in the household.
+- Auto-suggest recipes based on what we have.
+- Restocking reminders.
+
+**House Potluck System:**
+- **NEW:** Assign parts of a meal to different family members (e.g., "mashed potatoes to Michael, protein to Mom, cold sides to Kid A").
+- Track who brings what to family meals.
 
 **Expanded User Roles & Permissions:**
 - Ages: Implement age-based profiles that adjust UI complexity and available actions.
@@ -113,7 +130,14 @@
 - Introduce more pre-designed animal avatars.
 - Unlockable accessories or basic visual themes for avatars.
 
-### III. Expanded Learning Objectives
+### III. Activity & Learning System
+
+**Activity Tracking:**
+- **NEW:** Parent view shows which activities are "not completed."
+- Themed activities: "Shape of the week" or "color of the week" (e.g., Orange chicken with carrots and orange Jell-O).
+- **NEW:** Parents can fill in items or encourage children to complete activities.
+
+### IV. Expanded Learning Objectives
 
 **Kids:**
 - Basic budgeting skills.
@@ -125,7 +149,7 @@
 - Tools for teaching nutrition and budgeting.
 - Monitoring children's engagement and learning progress.
 
-### IV. Structured Feedback & Iteration
+### V. Structured Feedback & Iteration
 
 - Beta Testing Program: Formalize a beta testing group.
 - Feedback Analysis: Systematically analyze feedback for trends and recurring issues/requests.
@@ -170,4 +194,5 @@
 
 ---
 
-*Last Updated: July 11, 2026*
+*Last Updated: July 12, 2026*
+*Version 2.0 - Family Edition features added based on Eva's feedback*

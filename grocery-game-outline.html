@@ -2,50 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grocery Game Outline</title>
+    <title>Grocery Game Outline v2 - Family Edition</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: Georgia, serif; font-size: 12pt; line-height: 1.4; padding: 30px; max-width: 700px; margin: 0 auto; }
+        body { font-family: Georgia, serif; font-size: 12pt; line-height: 1.4; padding: 30px; max-width: 800px; margin: 0 auto; }
         h1 { font-size: 18pt; margin-bottom: 20px; text-align: center; }
         h2 { font-size: 14pt; margin-top: 25px; margin-bottom: 10px; border-bottom: 1px solid #000; }
+        h3 { font-size: 12pt; margin-top: 15px; margin-bottom: 8px; }
         table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 11pt; }
         th, td { border: 1px solid #000; padding: 8px; text-align: left; }
         th { background: #ddd; }
         .section { margin-top: 15px; }
         .list { margin-left: 20px; }
         .emoji { font-size: 14pt; }
+        .new { background: #e8f5e9; border-left: 3px solid #4CAF50; padding-left: 10px; }
+        .todo { color: #666; font-style: italic; }
         @media print { body { padding: 15px; } }
     </style>
 </head>
 <body>
 
-<h1>🛒 Grocery Game Outline</h1>
+<h1>🛒 Grocery Game Outline v2.0 — Family Edition</h1>
 
 <div class="section">
-<h2>Main Sections (9)</h2>
+<h2>Main Sections (10)</h2>
 
 <ol>
 <li><strong>Pick a Category</strong> — 12 categories<br>
-🥬 Produce &nbsp; 🥩 Meat &nbsp; 🧊 Dairy &nbsp; 🥫 Pantry &nbsp; 🧊 Frozen &nbsp; 🥤 Beverages &nbsp; 🍪 Snacks &nbsp; 🥫 Condiments &nbsp; 🍰 Baking &nbsp; ⚡ Quick &nbsp; 🧹 Cleaning &nbsp; 🧴 Personal &nbsp; � Pets</li>
+🥬 Produce &nbsp; 🥩 Meat &nbsp; 🧊 Dairy &nbsp; 🥫 Pantry &nbsp; 🧊 Frozen &nbsp; 🥤 Beverages &nbsp; 🍪 Snacks &nbsp; 🧂 Condiments &nbsp; 🍪 Baking &nbsp; 🍱 Quick &nbsp; 🧹 Cleaning &nbsp; 🧴 Personal &nbsp; 🐾 Pets</li>
 
-<li><strong>Items</strong> — Items display within selected category, each item has add/remove button, can add to My List</li>
+<li><strong>Items</strong> — Items display with <span class="new">images</span>, add/remove button, can add to My List</li>
 
-<li><strong>📋 My List</strong> — Kid's personal list with checkboxes, shows item name + checkbox, check off when "shopping", remove button per item</li>
+<li><strong>📋 My List</strong> — Personal list with checkboxes, shows item + <span class="new">user avatar</span>, remove button per item</li>
 
 <li><strong>🏪 Shop Mode</strong> — Shopping simulation mode, "shop" through items</li>
 
-<li><strong>🍳 Recipes</strong> — Recipe cards display, click card for details</li>
+<li><strong>🍳 Recipes</strong> — Recipe cards with details, <span class="new">ingredient editing</span> before adding</li>
 
-<li><strong>💰 Budget Challenge</strong> — Budget: $20 (default), tracks: Spent amount, Budget: $20 / Spent: $0</li>
+<li><strong>💰 Budget Challenge</strong> — <span class="new">Editable</span> budget, tracks spent, <span class="new">parent checkout decision</span></li>
 
-<li><strong>👩 Parent Dashboard</strong> — Parent section controls/actions, shows child's list, actions menu</li>
+<li><strong>👨‍👩‍👧‍👦 Family Hub</strong> — <span class="new">NEW</span> Master list shows all family members' items, <span class="new">voting system</span>, <span class="new">sort by user/store</span></li>
+
+<li><strong>🏠 Inventory</strong> — <span class="new">NEW</span> Track household food, restocking suggestions</li>
+
+<li><strong>🎉 House Potluck</strong> — <span class="new">NEW</span> Assign meal parts to family members</li>
+
+<li><strong>👩 Parent Dashboard</strong> — Parent controls, age-based requirements, activity tracking</li>
 </ol>
 </div>
 
 <div class="section">
 <h2>Detailed Breakdown</h2>
 
-<h3>Pick a Category (12)</h3>
+<h3>1. Pick a Category (12)</h3>
 <table>
 <tr><th>Category</th><th>Category</th><th>Category</th></tr>
 <tr><td>Produce</td><td>Meat</td><td>Dairy</td></tr>
@@ -55,9 +64,10 @@
 <tr><td>Pets</td><td></td><td></td></tr>
 </table>
 
-<h3>2. Items</h3>
+<h3>2. Items <span class="todo">(needs images)</span></h3>
 <ul class="list">
 <li>Display within selected category</li>
+<li class="new">Clear, vibrant item images (banana image for banana, egg image for egg)</li>
 <li>Add/remove buttons</li>
 </ul>
 
@@ -65,35 +75,90 @@
 <ul class="list">
 <li>Checkboxes</li>
 <li>Remove button per item</li>
+<li class="new">Show which user/child added each item (avatar)</li>
+<li class="new">Quantity adjustment per item</li>
 </ul>
 
 <h3>4. Shop Mode</h3>
 <ul class="list">
 <li>Simulation mode</li>
+<li>Check off items as "shopped"</li>
 </ul>
 
-<h3>5. Recipes</h3>
+<h3>5. Recipes <span class="new">(enhanced)</span></h3>
 <ul class="list">
 <li>Recipe cards</li>
+<li class="new">+/- buttons to adjust ingredient quantities</li>
+<li class="new">Uncheck individual ingredients (e.g., "unshack shells if already have")</li>
+<li class="new">Substitution voting: "We have X, could make Y. Vote?"</li>
 </ul>
 
-<h3>6. Budget Challenge</h3>
+<h3>6. Budget Challenge <span class="new">(enhanced)</span></h3>
 <ul class="list">
-<li>Default: $20</li>
+<li>Editable budget amount (not fixed at $20)</li>
 <li>Tracks spent</li>
+<li class="new">Teaching tool — prices don't need to be exact</li>
+<li class="new">Parent checkout — mom decides if expensive items are actually purchased</li>
+<li class="new">Live pricing could come later</li>
 </ul>
 
-<h3>7. Parent Dashboard</h3>
+<h3>7. Family Hub <span class="new">NEW</span></h3>
 <ul class="list">
-<li>Controls/actions</li>
-<li>Shows child's list</li>
+<li>Master list of all items from all family members</li>
+<li class="new">Sort by: user, category, store, recipe</li>
+<li class="new">Voting visualization: show avatars for items, e.g., "ice cream" shows 3 kids' avatars, "oreos" shows 1</li>
+<li class="new">Store preferences (optional): assign items to Store A, B, etc.</li>
+<li class="new">Sort by store before export (free alternative to AnyList paid tier)</li>
+</ul>
+
+<h3>8. Inventory <span class="new">NEW</span></h3>
+<ul class="list">
+<li>Track all food currently in household</li>
+<li>Auto-suggest recipes based on what we have</li>
+<li>Restocking reminders</li>
+</ul>
+
+<h3>9. House Potluck <span class="new">NEW</span></h3>
+<ul class="list">
+<li>Assign parts of a meal to different family members</li>
+<li>Example: "mashed potatoes to Michael, protein to Mom, cold sides to Kid A"</li>
+</ul>
+
+<h3>10. Parent Dashboard <span class="new">(enhanced)</span></h3>
+<ul class="list">
+<li>View all family lists</li>
+<li class="new">Age-based requirements: e.g., "Child 2 must pick 1 fruit, 1 veggie, 1 other side per week"</li>
+<li class="new">Activity tracking: show what's "not completed"</li>
+<li class="new">Themed activities: "shape of the week," "color of the week"</li>
+<li class="new">Export list (rename from "Export to AnyList" → "Export List")</li>
+</ul>
+</div>
+
+<div class="section new">
+<h2>🚀 NEW Features from Eva's Feedback</h2>
+
+<ul class="list">
+<li>✅ Per-user avatars — each family member has different color/avatar on items</li>
+<li>✅ Voting system — visualize votes with avatars on items</li>
+<li>✅ Ingredient editing — +/- or uncheck ingredients before adding</li>
+<li>✅ Quantity adjustments — when adding, in recipes, on final lists</li>
+<li>✅ Editable budget — not fixed at $20</li>
+<li>✅ Parent checkout — mom decides if items are actually bought</li>
+<li>✅ Fix AnyList export — item names ONLY, 1 per line</li>
+<li>✅ Store preferences — assign items to specific stores</li>
+<li>✅ Sort by store before export (free AnyList alternative)</li>
+<li>✅ Household inventory tracking</li>
+<li>✅ Activity tracking for parents</li>
+<li>✅ Themed activities (shape/color of the week)</li>
+<li>✅ Item images — clear, vibrant, identifiable</li>
+<li>✅ Rename "Export to AnyList" → "Export List"</li>
 </ul>
 </div>
 
 ---
 
 <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #000; text-align: center; font-size: 10pt;">
-Notes: _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________</div>
+Notes: _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________ _______________________________________________________________________</div>
 
 </body>
 </html>
