@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Game - Learning Fun for Kids!</title>
+    <title>🛒 Grocery Game - Learning Fun!</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -18,83 +18,41 @@
         .container {
             background: white;
             border-radius: 30px;
-            padding: 40px;
+            padding: 50px;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            max-width: 600px;
+            max-width: 500px;
         }
-        h1 { color: #ff6b6b; font-size: 2.5em; margin-bottom: 10px; }
-        .subtitle { color: #666; font-size: 1.2em; margin-bottom: 30px; }
-        .game-preview {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        .game-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            border: 3px solid transparent;
-        }
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .game-card.colors { border-color: #ff6b6b; }
-        .game-card.shapes { border-color: #4ecdc4; }
-        .game-card.letters { border-color: #45b7d1; }
-        .game-card.counting { border-color: #96ceb4; }
-        .game-card h3 { margin-bottom: 8px; }
-        .game-card.colors h3 { color: #ff6b6b; }
-        .game-card.shapes h3 { color: #4ecdc4; }
-        .game-card.letters h3 { color: #45b7d1; }
-        .game-card.counting h3 { color: #96ceb4; }
+        h1 { color: #2d3436; font-size: 2.8em; margin-bottom: 10px; }
+        .subtitle { color: #636e72; font-size: 1.2em; margin-bottom: 40px; }
+        .emoji { font-size: 4em; margin-bottom: 20px; display: block; }
         .play-btn {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            background: linear-gradient(135deg, #00b894, #00cec9);
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.3em;
+            padding: 20px 60px;
+            font-size: 1.5em;
             border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
         .play-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 184, 148, 0.4);
         }
+        .tagline { margin-top: 30px; color: #b2bec3; font-size: 0.9em; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🛒 Grocery Game</h1>
-        <p class="subtitle">Learning fun for kids ages 3-5!</p>
-        <div class="game-preview">
-            <div class="game-card colors" onclick="loadGame('color_match.html')">
-                <h3>🎨 Color Match</h3>
-                <p>Learn colors!</p>
-            </div>
-            <div class="game-card shapes" onclick="loadGame('shape_sorter.html')">
-                <h3>⬜ Shape Sorter</h3>
-                <p>Match the shapes!</p>
-            </div>
-            <div class="game-card letters" onclick="loadGame('letter_tracing.html')">
-                <h3>🔤 Letter Tracing</h3>
-                <p>Write letters!</p>
-            </div>
-            <div class="game-card counting" onclick="loadGame('animal_match.html')">
-                <h3>🐄 Animal Match</h3>
-                <p>Count & match!</p>
-            </div>
-        </div>
-        <button class="play-btn" onclick="loadGame('grocery_game.html')">Start Game! 🎮</button>
+        <span class="emoji">🛒</span>
+        <h1>Grocery Game</h1>
+        <p class="subtitle">Learn to shop smart!</p>
+        <a href="grocery_game.html" class="play-btn">Start Game 🎮</a>
+        <p class="tagline">For kids ages 3-5</p>
     </div>
-    <script>
-        function loadGame(game) { window.location.href = game; }
-    </script>
 </body>
 </html>
