@@ -1,33 +1,23 @@
-# Tech Learning Games for Kids
+# 🛒 Grocery Game
 
-A collection of offline learning games for 3-5 year olds.
+A fun shopping list learning app for kids ages 3-5!
 
-## Games to Build
+## Live Demo
 
-### Phase 1 (Earliest)
-- [ ] Animal Match (with sounds)
-- [ ] Color Hunt
-- [ ] Shape Sorter
-- [ ] What's Missing?
-- [ ] Simple Puzzles (2-4 pieces)
+🔗 https://curiouscornucopious.github.io/grocery-game/
 
-### Phase 2 (Next Level)
-- [ ] Count & Click
-- [ ] Letter Tracing
-- [ ] Feed the Monster
-- [ ] Music/Instrument Match
+## Features
 
-### Phase 3 (Advanced)
-- [ ] Story Maker — pick character, setting, object → generates silly story → shows QR code → scan with phone to hear it read aloud (phone uses cellular data, computer stays offline)
-- [ ] Typing Practice
-- [ ] Math Quiz
-- [ ] Flashcards
+- Shop by category (Produce, Dairy, Meat, etc.)
+- Child mode (simple) vs Parent mode (full features)
+- Budget tracking
+- Recipe builder
+- Save & export lists
 
-## Tech Stack
-- Python + Tkinter for desktop .exe builds
-- HTML5 for browser-based versions
+## Tech
 
-## Notes
-- Use emojis and simple images for assets
-- Kid-friendly: bright colors, big buttons, minimal text
-- Voice prompts where possible
+Pure HTML/CSS/JS — no dependencies, runs in any browser.
+
+---
+
+*Made with ❤️ for little learners*
